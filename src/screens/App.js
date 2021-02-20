@@ -25,7 +25,8 @@ const App = ({ images, fetchImages }) => {
   const imageWithData = withData(ImageView, images);
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Gallery">
+      <Stack.Navigator  initialRouteName="Gallery"
+                        screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Gallery" component={galleryWithData} />
         <Stack.Screen name="Image" component={imageWithData} />
       </Stack.Navigator>
